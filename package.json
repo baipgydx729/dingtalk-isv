@@ -1,0 +1,27 @@
+{
+  "name": "dingtalk-isv",
+  "version": "1.0.0",
+  "main": "index",
+  "keywords": [
+    "dingtalk",
+    "suite",
+    "ISV",
+    "nodejs"
+  ],
+  "author": {
+    "name": "along"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baipgydx729/dingtalk-isv.git"
+  },
+  "dependencies": {
+    "superagent": "1.6.1"
+  },
+  "licenses": "MIT",
+  "email": "bpd729@gmail.com",
+  "description": "钉钉套件回调URL处理、钉钉套件主动调用API",
+  "bugs": {
+    "url": "https://github.com/baipgydx729/dingtalk-isv/issues"
+  }
+}
