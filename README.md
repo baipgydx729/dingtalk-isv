@@ -87,29 +87,29 @@ var api = new DingIsv.Suite(conf);
 ```
 
 ##方法
-### 获取企业号永久授权码
+#### 获取企业号永久授权码
 ```js
 api.getPermanentCode(tmp_auth_code, callback)
 ```
 tmp_auth_code字符串，从DingIsv.SuiteCallBack处获得。
-### 获取企业号Token
+#### 获取企业号Token
 ```js
 //auth_corpid和permanent_code由上面接口获得。
 api.getCorpToken(auth_corpid, permanent_code, callback)
 ```
-### 获取企业号信息
+#### 获取企业号信息
 ```js
 api.getAuthInfo(auth_corpid, permanent_code, callback)
 ```
-### 获取企业号应用
+#### 获取企业号应用
 ```js
 api.getAgent(agentid, auth_corpid, permanent_code, callback)
 ```
-### 激活授权套件
+#### 激活授权套件
 ```js
 api.activateSuite(auth_corpid, permanent_code, callback)
 ```
-### 为授权方的企业单独设置IP白名单
+#### 为授权方的企业单独设置IP白名单
 ```js
 //ip_whitelist为数组格式：["1.2.3.4","5.6.*.*"]
 api.setCorpIpwhitelist(auth_corpid, ip_whitelist, callback)
