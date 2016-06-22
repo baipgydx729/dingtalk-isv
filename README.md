@@ -1,11 +1,11 @@
-# dingtalk ISV
+# DingTalk ISV
 钉钉套件主动调用**API**, 自带**cache**。
 
 ##安装 
 `npm install dingtalk-isv`
 
 ##ISV套件回调URL处理
-### express中间件。自动验证回调URL有效性。
+express中间件。自动验证回调URL有效性。
 
 构造函数：
 
@@ -14,13 +14,11 @@ var DingIsv = require('dingtalk-isv');
 var config = {
   token: 'xxxxxxxxx',
   encodingAESKey: 'xxxxxxxxxxxxxxxxxxx',
-  suiteid: 'xxxxxxxxxxxx', //第一次验证没有不用填
-
+  suiteid: 'xxxxxxxxxxxx', //第一次验证没有不用填 
   saveTicket: function(data, callback){//可选，和主动调用API: dingtalk_suite 配合使用。
     //data:{value: ticket字符串,  expires：到期时间，钉钉回调时间戳 + 20分钟}
-    fs.writeFile(this.suiteid + 'ticket.txt',JSON.stringify(data), callback);
-  }
-
+    //..dosomething
+  } 
 }
 
 app.post('/dingtalk/isv/receive', DingIsv.SuiteCallBack(config,
@@ -55,7 +53,7 @@ app.post('/dingtalk/isv/receive', DingIsv.SuiteCallBack(config,
        res.json({errcode: 1000, errmsg: 'error, ddtalk unknow EventType'});
     }
 }));
-
+```
 
 
 ##ISV套件API操作示例
