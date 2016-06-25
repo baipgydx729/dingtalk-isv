@@ -293,7 +293,7 @@ api.getDepartmentUsers(id).then(function(result){ });
 api.getDepartmentUsersDetail(id).then(function(result){ });
 
 //获取用户信息
-api.getUser(id, callback);
+api.getUser(id).then(function(result){ });
 
 //通过code获取用户一些信息(App登录用)。
 api.getUserInfoByCode(code).then(function(result){ });
